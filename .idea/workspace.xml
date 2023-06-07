@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/cliente/ProductoClienteRest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
