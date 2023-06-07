@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/dto/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/dto/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/cliente/ProductoClienteRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -47,7 +52,7 @@
     &quot;last_opened_file_path&quot;: &quot;D:/Documentos/code/microservicios-spring-boot&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MicroservicioItemApplication">
     <configuration name="Item" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.quetzalcode.items.dto.Item" />
       <module name="microservicio-items" />
@@ -61,8 +66,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MicroservicioItemApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.quetzalcode.items.MicroservicioItemApplication" />
+      <module name="microservicio-items" />
+      <option name="PROGRAM_PARAMETERS" value="mvn clean install -DskipTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.quetzalcode.items.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroservicioProductosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.quetzalcode.productos.MicroservicioProductosApplication" />
+      <module name="microservicio-productos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.quetzalcode.productos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MicroservicioItemApplication" />
+        <item itemvalue="Application.MicroservicioProductosApplication" />
         <item itemvalue="Application.Item" />
       </list>
     </recent_temporary>
