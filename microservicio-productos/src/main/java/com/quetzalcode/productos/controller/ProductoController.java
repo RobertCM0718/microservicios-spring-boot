@@ -1,4 +1,4 @@
-package com.quetzalcode.productos;
+package com.quetzalcode.productos.controller;
 
 import com.quetzalcode.productos.entity.Producto;
 import com.quetzalcode.productos.service.IProductoService;
