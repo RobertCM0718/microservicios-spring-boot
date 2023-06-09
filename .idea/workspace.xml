@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/cliente/ProductoClienteRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/cliente/ProductoClienteRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/dto/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/dto/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/controller/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/controller/ProductoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
