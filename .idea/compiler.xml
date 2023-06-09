@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="microservicio-items" />
         <module name="microservicio-productos" />
+        <module name="microservicio-eureka-server" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="microservicio-eureka-server" options="-parameters" />
       <module name="microservicio-items" options="-parameters" />
       <module name="microservicio-productos" options="-parameters" />
     </option>
