@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service("serviceFeign")
-@Primary
 public class ItemServiceFeign implements IItemService{
 
     @Autowired
