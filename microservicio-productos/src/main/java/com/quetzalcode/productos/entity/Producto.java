@@ -5,9 +5,14 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ *  producto
+ *
+ */
 @Entity
 @Table(name="productos")
 public class Producto implements Serializable {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,4 +65,6 @@ public class Producto implements Serializable {
     public void setCreateAt(Date createAt) {
         this.createAt = createAt;
     }
+
+    private static final long serialVersionUID = -227842339727863832L;
 }
