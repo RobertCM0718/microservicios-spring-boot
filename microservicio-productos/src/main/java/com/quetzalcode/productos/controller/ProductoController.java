@@ -39,7 +39,7 @@ public class ProductoController {
         producto.setPort(port);
 
         /*try {
-            Thread.sleep(2000L);
+            Thread.sleep(1000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }*/
