@@ -10,12 +10,14 @@
         <module name="microservicio-zuul-server" />
         <module name="microservicio-productos" />
         <module name="microservicio-eureka-server" />
+        <module name="microservicio-gateway-server" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="microservicio-eureka-server" options="-parameters" />
+      <module name="microservicio-gateway-server" options="-parameters" />
       <module name="microservicio-items" options="-parameters" />
       <module name="microservicio-productos" options="-parameters" />
       <module name="microservicio-zuul-server" options="-parameters" />
