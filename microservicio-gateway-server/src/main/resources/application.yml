@@ -8,14 +8,14 @@ spring:
             - Path=/api/productos/**
           filters:
             - StripPrefix=2
-            - name: Ejemplo
-              args:
-                mensaje: Hola mi mensaje personalizado
-                cookieNombre: usuario
-                cookieValor: RobertoCamaron
+            - EjemploCookie=Hola mi mensaje personalizado, usuario, RobertoCamaron
         - id: microservicio-items
           uri: lb://microservicio-items
           predicates:
             - Path=/api/items/**
           filters:
             - StripPrefix=2
+            - AddRequestHeader=token-request, 123456
+            - AddResponseHeader=token-response, 12345678
+            - SetResponseHeader=Content-Type, text/plain
+            - AddRequestParameter=nombre, roberto

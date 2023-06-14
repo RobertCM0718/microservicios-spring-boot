@@ -4,12 +4,15 @@ import com.quetzalcode.gateway.filters.GlobalFilterCustom;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
+import org.springframework.cloud.gateway.filter.OrderedGatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.cloud.gateway.filter.factory.GatewayFilterFactory;
 import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -23,19 +26,25 @@ public class EjemploGatewayFilterFactory extends AbstractGatewayFilterFactory<Ej
 
     @Override
     public GatewayFilter apply(Configuracion config) {
-        return (exchange, chain) -> {
-
-            LOG.info("ejecutando pre gateway filter factory: " + config.mensaje);
-            return chain.filter(exchange).then(Mono.fromRunnable(() -> {
-
-                Optional.ofNullable(config.cookieValor).ifPresent(cookie -> {
-                    exchange.getResponse().addCookie(ResponseCookie.from(config.cookieNombre, cookie).build());
+        return new OrderedGatewayFilter((exchange, chain) -> {
+            LOG.info("Ejecutando pre gateway filter factory: "+config.mensaje);
+            return chain.filter(exchange).then(Mono.fromRunnable(() ->{
+                Optional.ofNullable(config.cookieValor).ifPresent( valor -> {
+                    exchange.getResponse().addCookie(ResponseCookie.from(config.cookieNombre,valor).build());
                 });
-
-                LOG.info("ejecutando post gateway filter factory: " + config.mensaje);
-
+                LOG.info("Ejecutando post gateway filter factory"+config.mensaje);
             }));
-        };
+        },2);
+    }
+
+    @Override
+    public String name() {
+        return "EjemploCookie";
+    }
+
+    @Override
+    public List<String> shortcutFieldOrder() {
+        return Arrays.asList("mensaje","cookieNombre","cookieValor");
     }
 
     public static class Configuracion {
