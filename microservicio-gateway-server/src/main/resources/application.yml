@@ -8,6 +8,11 @@ spring:
             - Path=/api/productos/**
           filters:
             - StripPrefix=2
+            - name: Ejemplo
+              args:
+                mensaje: Hola mi mensaje personalizado
+                cookieNombre: usuario
+                cookieValor: RobertoCamaron
         - id: microservicio-items
           uri: lb://microservicio-items
           predicates:
