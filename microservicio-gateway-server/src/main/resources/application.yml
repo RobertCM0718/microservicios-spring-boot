@@ -6,6 +6,11 @@ spring:
           uri: lb://microservicio-productos
           predicates:
             - Path=/api/productos/**
+            - Header= token, \d+
+            - Header= Content-Type,application/json
+            - Method=GET, POST
+            - Query=color, verde
+            - Cookie=color, azul
           filters:
             - StripPrefix=2
             - EjemploCookie=Hola mi mensaje personalizado, usuario, RobertoCamaron
