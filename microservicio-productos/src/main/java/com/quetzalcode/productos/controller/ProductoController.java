@@ -41,7 +41,7 @@ public class ProductoController {
         }
 
         if(id.equals(7L)){
-            TimeUnit.SECONDS.sleep(5L);
+            TimeUnit.SECONDS.sleep(3L);
         }
 
         Producto producto = iProductoService.findById(id);
