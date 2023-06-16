@@ -33,7 +33,7 @@ public class ItemController {
     @GetMapping("/ver/{id}/cantidad/{cantidad}")
     public Item detalle(@PathVariable Long id,@PathVariable Integer cantidad){
         /*return iItemService.findById(id, cantidad);*/
-        return circuitBreakerFactory.create("items").run(() ->  iItemService.findById(id, cantidad)/*, e -> metodoAlternativo(id,cantidad,e)*/);
+        return circuitBreakerFactory.create("items").run(() ->  iItemService.findById(id, cantidad), e -> metodoAlternativo(id,cantidad,e));
     }
 
     public Item metodoAlternativo(Long id, Integer cantidad, Throwable e) {
@@ -45,7 +45,7 @@ public class ItemController {
 
         item.setCantidad(cantidad);
         producto.setId(id);
-        producto.setNombre("Camara Sony");
+        producto.setNombre("Uuuuuu ya trono");
         producto.setPrecio(500.00);
         item.setProducto(producto);
         return item;
