@@ -3,6 +3,7 @@ package com.quetzalcode.items.controller;
 import com.quetzalcode.items.dto.Item;
 import com.quetzalcode.items.dto.Producto;
 import com.quetzalcode.items.service.IItemService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,12 @@ public class ItemController {
     public Item detalle(@PathVariable Long id,@PathVariable Integer cantidad){
         /*return iItemService.findById(id, cantidad);*/
         return circuitBreakerFactory.create("items").run(() ->  iItemService.findById(id, cantidad), e -> metodoAlternativo(id,cantidad,e));
+    }
+
+    @CircuitBreaker(name = "items", fallbackMethod = "metodoAlternativo")
+    @GetMapping("/ver2/{id}/cantidad/{cantidad}")
+    public Item detalle2(@PathVariable Long id,@PathVariable Integer cantidad){
+        return iItemService.findById(id, cantidad);
     }
 
     public Item metodoAlternativo(Long id, Integer cantidad, Throwable e) {
