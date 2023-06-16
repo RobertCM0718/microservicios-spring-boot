@@ -3,6 +3,8 @@ package com.quetzalcode.items.controller;
 import com.quetzalcode.items.dto.Item;
 import com.quetzalcode.items.dto.Producto;
 import com.quetzalcode.items.service.IItemService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
@@ -12,6 +14,8 @@ import java.util.List;
 
 @RestController
 public class ItemController {
+
+    private final Logger LOG = LoggerFactory.getLogger(ItemController.class);
 
     @Autowired
     private CircuitBreakerFactory circuitBreakerFactory;
@@ -29,10 +33,13 @@ public class ItemController {
     @GetMapping("/ver/{id}/cantidad/{cantidad}")
     public Item detalle(@PathVariable Long id,@PathVariable Integer cantidad){
         /*return iItemService.findById(id, cantidad);*/
-        return circuitBreakerFactory.create("items").run(() ->  iItemService.findById(id, cantidad), e -> metodoAlternativo(id,cantidad));
+        return circuitBreakerFactory.create("items").run(() ->  iItemService.findById(id, cantidad)/*, e -> metodoAlternativo(id,cantidad,e)*/);
     }
 
-    public Item metodoAlternativo(Long id, Integer cantidad) {
+    public Item metodoAlternativo(Long id, Integer cantidad, Throwable e) {
+
+        LOG.error(e.getMessage());
+
         Item item = new Item();
         Producto producto = new Producto();
 

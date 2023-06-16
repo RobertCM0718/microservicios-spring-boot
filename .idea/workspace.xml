@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agrega microservicio gateway server.">
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/controller/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/controller/ProductoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="355773db-e40e-412f-9f5c-cbc325ad72ea" />
+        <option name="url" value="https://github.com/RobertCM0718/microservicios-spring-boot.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,7 +76,7 @@
       <recent name="com.quetzalcode.zuul.filters" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MicroservicioGatewayServerApplication">
+  <component name="RunManager" selected="Application.MicroservicioItemsApplication">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -192,10 +208,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MicroservicioGatewayServerApplication" />
         <item itemvalue="Application.MicroservicioItemsApplication" />
         <item itemvalue="Application.MicroservicioProductosApplication" />
         <item itemvalue="Application.MicroservicioEurekaServerApplication" />
+        <item itemvalue="Application.MicroservicioGatewayServerApplication" />
         <item itemvalue="Application.MicroservicioZuulServerApplication" />
       </list>
     </recent_temporary>
@@ -209,6 +225,29 @@
       <option name="presentableId" value="Default" />
       <updated>1686170652679</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
+      <created>1686723579962</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686723579962</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle." />
   </component>
 </project>
