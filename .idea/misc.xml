@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" />
         <option value="$PROJECT_DIR$/microservicio-zuul-server/microservicio-zuul-server/pom.xml" />
         <option value="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicio-config-server/pom.xml" />
       </list>
     </option>
   </component>
