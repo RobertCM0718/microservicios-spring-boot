@@ -1,13 +1,13 @@
 package com.quetzalcode.productos.controller;
 
-import com.quetzalcode.productos.entity.Producto;
+import com.quetzalcode.commons.entity.Producto;
 import com.quetzalcode.productos.service.IProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -55,5 +55,24 @@ public class ProductoController {
         }*/
 
         return producto;
+    }
+
+    @PostMapping("crear")
+    public ResponseEntity<?> crear(@RequestBody Producto producto){
+        return new ResponseEntity<Producto>(iProductoService.save(producto), HttpStatus.CREATED) ;
+    }
+
+    @PutMapping("/editar")
+    public ResponseEntity<?> editar(@RequestBody Producto producto){
+        Producto productoDb = iProductoService.findById(producto.getId());
+        productoDb.setNombre(producto.getNombre());
+        productoDb.setPrecio(producto.getPrecio());
+        return new ResponseEntity<Producto>(iProductoService.save(productoDb), HttpStatus.CREATED) ;
+    }
+
+    @DeleteMapping("/eliminar/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void eliminar(@PathVariable Long id){
+        iProductoService.deleteById(id);
     }
 }

@@ -2,9 +2,9 @@ resilience4j:
   circuitbreaker:
     configs:
       defecto:
-        slidingWindowSize: 6
-        failureRateThreshold: 50
-        waitDurationInOpenState: 20s
+        slidingWindowSize: 20
+        failureRateThreshold: 60
+        waitDurationInOpenState: 5s
         permittedNumberOfCallsInHalfOpenState: 4
         slowCallRateThreshold: 50
         slowCallDurationThreshold: 2s

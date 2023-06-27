@@ -1,11 +1,13 @@
 package com.quetzalcode.items.service;
 
+import com.quetzalcode.commons.entity.Producto;
 import com.quetzalcode.items.dto.Item;
-import com.quetzalcode.items.dto.Producto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,9 +18,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service("serviceRestTemplate")
-public class ItemServiceImpl implements IItemService{
+public class ItemServiceRestTemplate implements IItemService{
 
-    private static final Logger LOG = LoggerFactory.getLogger(ItemServiceImpl.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ItemServiceRestTemplate.class);
 
     @Autowired
     private RestTemplate restTemplate;
@@ -36,5 +38,27 @@ public class ItemServiceImpl implements IItemService{
         pathVariables.put("id",id.toString());
         Producto producto = restTemplate.getForObject("http://microservicio-productos/ver/{id}",Producto.class,pathVariables);
         return new Item(producto,cantidad);
+    }
+
+    @Override
+    public Producto save(Producto producto) {
+        HttpEntity<Producto> request = new HttpEntity<Producto>(producto);
+        ResponseEntity<Producto> response = restTemplate.exchange("http://microservicio-productos/crear", HttpMethod.POST,request,Producto.class );
+        return response.getBody();
+    }
+
+    @Override
+    public Producto update(Producto producto) {
+        HttpEntity<Producto> request = new HttpEntity<Producto>(producto);
+        ResponseEntity<Producto> response = restTemplate.exchange("http://microservicio-productos/editar", HttpMethod.PUT,request,Producto.class );
+        return response.getBody();
+    }
+
+    @Override
+    public void delete(Long id) {
+        Map<String,String> pathVariables = new HashMap<>();
+        pathVariables.put("id",id.toString());
+
+        restTemplate.delete("http://microservicio-productos/eliminar/{id}",pathVariables);
     }
 }

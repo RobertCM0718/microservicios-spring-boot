@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agrega anotación @TimeLimiter para configurar timeOut.">
-      <change afterPath="$PROJECT_DIR$/microservicio-item/src/main/resources/bootstrap.properties" afterDir="false" />
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config.">
+      <change afterPath="$PROJECT_DIR$/microservicio-commons/src/main/java/com/quetzalcode/commons/entity/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-config-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/cliente/ProductoClienteRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/cliente/ProductoClienteRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-items.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/dto/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/dto/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/IItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/IItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceRestTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/MicroservicioProductosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/MicroservicioProductosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/controller/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/controller/ProductoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/repository/ProductoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/repository/ProductoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/service/IProductoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/service/IProductoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/service/ProductoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/service/ProductoServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,10 +91,11 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "spring.configuration.checksum": "25f94372f7bd5db5b54df242388c528e",
     "vue.rearranger.settings.migration": "true"
   }
@@ -91,6 +105,7 @@
       <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-item\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.quetzalcode.commons.entity" />
       <recent name="com.quetzalcode.zuul.filters" />
     </key>
   </component>
@@ -222,6 +237,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MicroservicioCommonsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microservicio-commons" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.commons.MicroservicioCommonsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MicroservicioConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="microservicio-config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.config.server.MicroservicioConfigServerApplication" />
@@ -272,6 +294,7 @@
       <item itemvalue="Application.MicroservicioItemsApplication" />
       <item itemvalue="Application.MicroservicioProductosApplication" />
       <item itemvalue="JUnit.All in microservicio-productos" />
+      <item itemvalue="Spring Boot.MicroservicioCommonsApplication" />
       <item itemvalue="Spring Boot.MicroservicioConfigServerApplication" />
       <item itemvalue="Spring Boot.MicroservicioEurekaServerApplication" />
       <item itemvalue="Spring Boot.MicroservicioGatewayServerApplication" />
@@ -283,9 +306,9 @@
       <list>
         <item itemvalue="Application.MicroservicioGatewayServerApplication" />
         <item itemvalue="Application.MicroservicioItemsApplication" />
+        <item itemvalue="Application.MicroservicioConfigServerApplication" />
         <item itemvalue="Application.MicroservicioProductosApplication" />
         <item itemvalue="Application.MicroservicioEurekaServerApplication" />
-        <item itemvalue="Application.MicroservicioConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +322,9 @@
       <updated>1686170652679</updated>
       <workItem from="1687331226123" duration="273000" />
       <workItem from="1687464280804" duration="59000" />
-      <workItem from="1687643067314" duration="7482000" />
+      <workItem from="1687643067314" duration="7706000" />
+      <workItem from="1687661835838" duration="4630000" />
+      <workItem from="1687814308998" duration="4787000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -343,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1686966147489</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config.">
+      <option name="closed" value="true" />
+      <created>1687652639803</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687652639803</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +400,8 @@
     <MESSAGE value="Se agrega configuración de circuitBraker desde archivo yml." />
     <MESSAGE value="Se agrega anotación CircuitBreaker a servicio ver2 para indicar la relación del circuit braker configurado en el application.yml." />
     <MESSAGE value="Se agrega anotación @TimeLimiter para configurar timeOut." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrega anotación @TimeLimiter para configurar timeOut." />
+    <MESSAGE value="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

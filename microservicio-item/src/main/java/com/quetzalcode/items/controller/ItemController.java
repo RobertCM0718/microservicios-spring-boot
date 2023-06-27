@@ -1,11 +1,10 @@
 package com.quetzalcode.items.controller;
 
+import com.quetzalcode.commons.entity.Producto;
 import com.quetzalcode.items.dto.Item;
-import com.quetzalcode.items.dto.Producto;
 import com.quetzalcode.items.service.IItemService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
-import org.apache.http.protocol.HTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,6 +78,22 @@ public class ItemController {
         producto.setPrecio(500.00);
         item.setProducto(producto);
         return item;
+    }
+
+    @PostMapping("crear")
+    public ResponseEntity<?> crear(@RequestBody Producto producto){
+        return new ResponseEntity<Producto>(iItemService.save(producto), HttpStatus.CREATED) ;
+    }
+
+    @PutMapping("/editar")
+    public ResponseEntity<?> editar(@RequestBody Producto producto){
+        return new ResponseEntity<Producto>(iItemService.update(producto), HttpStatus.CREATED) ;
+    }
+
+    @DeleteMapping("/eliminar/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void eliminar(@PathVariable Long id){
+        iItemService.delete(id);
     }
 
     public CompletableFuture<Item> metodoAlternativo2(Long id, Integer cantidad, Throwable e) {
