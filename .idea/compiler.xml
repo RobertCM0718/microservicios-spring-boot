@@ -13,6 +13,7 @@
         <module name="microservicio-config-server" />
         <module name="microservicio-items" />
         <module name="microservicio-commons" />
+        <module name="microservicio-usuarios" />
       </profile>
     </annotationProcessing>
   </component>
@@ -24,6 +25,7 @@
       <module name="microservicio-gateway-server" options="-parameters" />
       <module name="microservicio-items" options="-parameters" />
       <module name="microservicio-productos" options="-parameters" />
+      <module name="microservicio-usuarios" options="-parameters" />
       <module name="microservicio-zuul-server" options="-parameters" />
     </option>
   </component>

@@ -5,26 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config.">
-      <change afterPath="$PROJECT_DIR$/microservicio-commons/src/main/java/com/quetzalcode/commons/entity/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/entity/Rol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/repository/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/IUsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/import.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/cliente/ProductoClienteRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/cliente/ProductoClienteRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/dto/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/dto/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/IItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/IItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/service/ItemServiceRestTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/MicroservicioProductosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/MicroservicioProductosApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/controller/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/controller/ProductoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/repository/ProductoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/repository/ProductoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/service/IProductoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/service/IProductoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/service/ProductoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/service/ProductoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +64,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2QtQyc3RakzS7kuYbYAQptfMrqA" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -81,6 +78,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -95,8 +96,9 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "spring.configuration.checksum": "25f94372f7bd5db5b54df242388c528e",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "c74e880277585858651b600956d77be9",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -116,7 +118,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MicroservicioGatewayServerApplication">
+  <component name="RunManager" selected="Spring Boot.MicroservicioGatewayServerApplication">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -279,6 +281,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MicroservicioUsuariosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microservicio-usuarios" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.usuarios.MicroservicioUsuariosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MicroservicioZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="microservicio-zuul-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.zuul.MicroservicioZuulServerApplication" />
@@ -300,15 +309,16 @@
       <item itemvalue="Spring Boot.MicroservicioGatewayServerApplication" />
       <item itemvalue="Spring Boot.MicroservicioItemApplication" />
       <item itemvalue="Spring Boot.MicroservicioProductosApplication" />
+      <item itemvalue="Spring Boot.MicroservicioUsuariosApplication" />
       <item itemvalue="Spring Boot.MicroservicioZuulServerApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MicroservicioGatewayServerApplication" />
-        <item itemvalue="Application.MicroservicioItemsApplication" />
-        <item itemvalue="Application.MicroservicioConfigServerApplication" />
-        <item itemvalue="Application.MicroservicioProductosApplication" />
         <item itemvalue="Application.MicroservicioEurekaServerApplication" />
+        <item itemvalue="Application.MicroservicioItemsApplication" />
+        <item itemvalue="Application.MicroservicioProductosApplication" />
+        <item itemvalue="Application.MicroservicioConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +334,11 @@
       <workItem from="1687464280804" duration="59000" />
       <workItem from="1687643067314" duration="7706000" />
       <workItem from="1687661835838" duration="4630000" />
-      <workItem from="1687814308998" duration="4787000" />
+      <workItem from="1687814308998" duration="4952000" />
+      <workItem from="1687915225452" duration="138000" />
+      <workItem from="1687991868677" duration="820000" />
+      <workItem from="1687992697649" duration="529000" />
+      <workItem from="1687993395467" duration="10097000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>

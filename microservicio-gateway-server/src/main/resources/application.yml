@@ -44,3 +44,9 @@ spring:
             - AddRequestHeader=token-request, 123456
             - AddResponseHeader=token-response, 12345678
             - AddRequestParameter=nombre, roberto
+        - id: microservicio-usuarios
+          uri: lb://microservicio-usuarios
+          predicates:
+            - Path=/api/usuarios/**
+          filters:
+            - StripPrefix=2
