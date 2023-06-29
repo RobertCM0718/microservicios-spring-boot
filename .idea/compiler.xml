@@ -6,17 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="microservicio-items" />
+        <module name="microservicio-zuul-server" />
         <module name="microservicio-productos" />
         <module name="microservicio-eureka-server" />
+        <module name="microservicio-gateway-server" />
+        <module name="microservicio-config-server" />
+        <module name="microservicio-items" />
+        <module name="microservicio-commons" />
+        <module name="microservicio-usuarios" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="microservicio-commons" options="-parameters" />
+      <module name="microservicio-config-server" options="-parameters" />
       <module name="microservicio-eureka-server" options="-parameters" />
+      <module name="microservicio-gateway-server" options="-parameters" />
       <module name="microservicio-items" options="-parameters" />
       <module name="microservicio-productos" options="-parameters" />
+      <module name="microservicio-usuarios" options="-parameters" />
+      <module name="microservicio-zuul-server" options="-parameters" />
     </option>
   </component>
 </project>

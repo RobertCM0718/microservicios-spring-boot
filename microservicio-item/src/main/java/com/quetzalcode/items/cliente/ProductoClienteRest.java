@@ -1,13 +1,12 @@
 package com.quetzalcode.items.cliente;
 
-import com.quetzalcode.items.dto.Producto;
+import com.quetzalcode.commons.entity.Producto;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "microservicio-productos",url = "localhost:8080")
+@FeignClient(name = "microservicio-productos")
 public interface ProductoClienteRest {
 
     @GetMapping("/listar")
@@ -15,5 +14,14 @@ public interface ProductoClienteRest {
 
     @GetMapping("/ver/{id}")
     public Producto detalle(@PathVariable Long id);
+
+    @PostMapping("crear")
+    public Producto crear(@RequestBody Producto producto);
+
+    @PutMapping("/editar")
+    public Producto editar(@RequestBody Producto producto);
+
+    @DeleteMapping("/eliminar/{id}")
+    public void eliminar(@PathVariable Long id);
 
 }

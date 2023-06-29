@@ -7,6 +7,12 @@
         <option value="$PROJECT_DIR$/microservicio-item/pom.xml" />
         <option value="$PROJECT_DIR$/microservicio-productos/pom.xml" />
         <option value="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicio-zuul-server/microservicio-zuul-server/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicio-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicio-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicio-usuarios/pom.xml" />
       </list>
     </option>
   </component>

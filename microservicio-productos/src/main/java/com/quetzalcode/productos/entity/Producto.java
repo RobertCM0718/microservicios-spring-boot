@@ -1,13 +1,28 @@
 package com.quetzalcode.productos.entity;
 
-import jakarta.persistence.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import jakarta.persistence.Transient;
+
 
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ *  producto
+ *
+ */
 @Entity
 @Table(name="productos")
 public class Producto implements Serializable {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +33,16 @@ public class Producto implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date createAt;
 
+    @Transient
+    private Integer port;
 
+    public Integer getPort() {
+        return port;
+    }
+
+    public void setPort(Integer port) {
+        this.port = port;
+    }
 
     public Long getId() {
         return id;
@@ -51,4 +75,6 @@ public class Producto implements Serializable {
     public void setCreateAt(Date createAt) {
         this.createAt = createAt;
     }
+
+    private static final long serialVersionUID = -227842339727863832L;
 }

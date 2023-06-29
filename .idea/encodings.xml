@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/microservicio-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-config-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-eureka-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-gateway-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-gateway-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-item/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-item/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-productos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-productos/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-usuarios/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-usuarios/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-zuul-server/microservicio-zuul-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-zuul-server/microservicio-zuul-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-zuul-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-zuul-server/src/main/resources" charset="UTF-8" />
   </component>
 </project>

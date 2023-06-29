@@ -1,5 +1,8 @@
 package com.quetzalcode.items.dto;
 
+import com.quetzalcode.commons.entity.Producto;
+
+
 public class Item {
     private Producto producto;
     private Integer cantidad;

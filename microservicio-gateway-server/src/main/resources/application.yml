@@ -1,0 +1,52 @@
+resilience4j:
+  circuitbreaker:
+    configs:
+      defecto:
+        slidingWindowSize: 20
+        failureRateThreshold: 60
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 4
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2s
+    instances:
+      productos:
+        baseConfig: defecto
+  timelimiter:
+    configs:
+      defecto:
+        timeoutDuration: 2s
+    instances:
+      productos:
+        baseConfig: defecto
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: microservicio-productos
+          uri: lb://microservicio-productos
+          predicates:
+            - Path=/api/productos/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: productos
+                statusCodes: 500
+                fallbackUri: forward:/api/items/ver/9/cantidad/5
+            - StripPrefix=2
+            - EjemploCookie=Hola mi mensaje personalizado, usuario, RobertoCamaron
+        - id: microservicio-items
+          uri: lb://microservicio-items
+          predicates:
+            - Path=/api/items/**
+          filters:
+            - StripPrefix=2
+            - AddRequestHeader=token-request, 123456
+            - AddResponseHeader=token-response, 12345678
+            - AddRequestParameter=nombre, roberto
+        - id: microservicio-usuarios
+          uri: lb://microservicio-usuarios
+          predicates:
+            - Path=/api/usuarios/**
+          filters:
+            - StripPrefix=2
