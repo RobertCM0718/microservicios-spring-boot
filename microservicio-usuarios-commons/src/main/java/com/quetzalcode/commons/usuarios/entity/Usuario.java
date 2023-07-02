@@ -1,4 +1,4 @@
-package com.quetzalcode.usuarios.entity;
+package com.quetzalcode.commons.usuarios.entity;
 
 import jakarta.persistence.*;
 

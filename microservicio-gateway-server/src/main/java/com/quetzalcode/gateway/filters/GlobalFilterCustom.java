@@ -21,13 +21,13 @@ public class GlobalFilterCustom implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         LOG.info("ejecutando filtro pre");
-        exchange.getRequest().mutate().headers(h -> h.add("token","123456"));
+//        exchange.getRequest().mutate().headers(h -> h.add("token","123456"));
         return chain.filter(exchange).then(Mono.fromRunnable(() ->{
             LOG.info("ejecutando filtro post");
-            Optional.ofNullable(exchange.getRequest().getHeaders().getFirst("token")).ifPresent(valor -> {
-                exchange.getResponse().getHeaders().add("token",valor);
-            });
-            exchange.getResponse().getCookies().add("color", ResponseCookie.from("color","rojo").build());
+//            Optional.ofNullable(exchange.getRequest().getHeaders().getFirst("token")).ifPresent(valor -> {
+//                exchange.getResponse().getHeaders().add("token",valor);
+//            });
+//            exchange.getResponse().getCookies().add("color", ResponseCookie.from("color","rojo").build());
             //exchange.getResponse().getHeaders().setContentType(MediaType.TEXT_PLAIN);
         }));
     }

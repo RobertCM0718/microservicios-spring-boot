@@ -11,8 +11,12 @@
     <file url="file://$PROJECT_DIR$/microservicio-gateway-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-item/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-item/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-oauth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-oauth/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-productos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-productos/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicio-usuarios-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-usuarios/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-usuarios/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservicio-zuul-server/microservicio-zuul-server/src/main/java" charset="UTF-8" />
