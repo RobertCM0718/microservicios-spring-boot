@@ -1,12 +1,7 @@
-package com.quetzalcode.usuarios.service;
-
+package com.quetzalcode.oauth.services;
 
 import com.quetzalcode.commons.usuarios.entity.Usuario;
 
-import java.util.List;
-
 public interface IUsuarioService {
     public Usuario findByUsername(String username);
-
-    public List<Usuario> findAll();
 }

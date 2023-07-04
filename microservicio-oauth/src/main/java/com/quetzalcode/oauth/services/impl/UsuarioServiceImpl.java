@@ -1,7 +1,8 @@
-package com.quetzalcode.oauth.services;
+package com.quetzalcode.oauth.services.impl;
 
 import com.quetzalcode.commons.usuarios.entity.Usuario;
 import com.quetzalcode.oauth.clients.UsuarioFeignClient;
+import com.quetzalcode.oauth.services.IUsuarioService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class UsuarioServiceImpl implements UserDetailsService {
+public class UsuarioServiceImpl implements IUsuarioService, UserDetailsService {
 
     private Logger LOG = LoggerFactory.getLogger(UsuarioServiceImpl.class);
 
@@ -38,5 +39,10 @@ public class UsuarioServiceImpl implements UserDetailsService {
                 .collect(Collectors.toList());
         LOG.info("Usuario auntenticado: "+username);
         return new User(usuario.getUsername(),usuario.getPassword(),usuario.getActivo(),true,true,true,authorities);
+    }
+
+    @Override
+    public Usuario findByUsername(String username) {
+        return usuarioFeignClient.findByUserName(username);
     }
 }
