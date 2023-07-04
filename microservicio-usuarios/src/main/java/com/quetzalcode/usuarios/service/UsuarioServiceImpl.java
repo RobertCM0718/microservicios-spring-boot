@@ -19,7 +19,38 @@ public class UsuarioServiceImpl implements IUsuarioService{
     }
 
     @Override
+    public Usuario findById(Long id) {
+        return usuarioRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public List<Usuario> findAll() {
         return usuarioRepository.findAll();
+    }
+
+    @Override
+    public Usuario save(Usuario usuario) {
+        return usuarioRepository.save(usuario);
+    }
+
+    @Override
+    public Usuario update(Usuario usuario, Long id) {
+        Usuario usuarioBDD = findById(id);
+        if (usuarioBDD!=null){
+            usuarioBDD.setActivo(usuario.getActivo());
+            usuarioBDD.setPassword(usuario.getPassword());
+            usuarioBDD.setUsername(usuario.getUsername());
+            usuarioBDD.setNombre(usuario.getNombre());
+            usuarioBDD.setApellido(usuario.getApellido());
+            usuarioBDD.setEmail(usuario.getEmail());
+            usuarioBDD.setRoles(usuario.getRoles());
+            usuarioBDD = usuarioRepository.save(usuarioBDD);
+        }
+        return usuarioBDD;
+    }
+
+    @Override
+    public void eliminar(Long id) {
+        usuarioRepository.deleteById(id);
     }
 }

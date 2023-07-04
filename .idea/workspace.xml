@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se crea proyecto usuarios.">
-      <change afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/InfoAdicionalToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/IUsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-zuul-server/src/main/java/com/quetzalcode/zuul/oauth/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-zuul-server/src/main/resources/bootstrap.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/clients/UsuarioFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/clients/UsuarioFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-oauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/AuthorizationServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/impl/UsuarioServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/repository/UsuarioRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/IUsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/IUsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/import.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/src/main/java/com/quetzalcode/zuul/oauth/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/src/main/java/com/quetzalcode/zuul/oauth/ResourceServerConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,37 +73,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Documentos/code/microservicios-spring-boot/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/entity&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;84e48ba8d5ba83ff2d6395eaa1d2de14&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Documentos/code/microservicios-spring-boot/microservicio-zuul-server/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "84e48ba8d5ba83ff2d6395eaa1d2de14",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-zuul-server\src\main\resources" />
+      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-oauth\src\main\resources" />
       <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-usuarios\src\main\java\com\quetzalcode\usuarios\entity" />
       <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-usuarios-commons\src\main\java\com\quetzalcode\usuarios\commons\entity" />
       <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-item\src\main\resources" />
@@ -368,7 +365,8 @@
       <workItem from="1688229628716" duration="11536000" />
       <workItem from="1688261277890" duration="3939000" />
       <workItem from="1688422733902" duration="1033000" />
-      <workItem from="1688447221531" duration="6530000" />
+      <workItem from="1688447221531" duration="6674000" />
+      <workItem from="1688493937296" duration="7919000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -472,6 +470,11 @@
           <url>file://$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/impl/UsuarioServiceImpl.java</url>
           <line>28</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

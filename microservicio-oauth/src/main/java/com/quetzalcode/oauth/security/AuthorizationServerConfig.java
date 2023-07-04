@@ -1,6 +1,8 @@
 package com.quetzalcode.oauth.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,9 +18,19 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 import java.util.Arrays;
 
+@RefreshScope//Indica que es suceptible a cambios provenientes de la configuración git.
 @EnableAuthorizationServer
 @Configuration
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+
+    @Value("${config.security.oauth.client.id}")//Esto vale frontEndApp y esta en un archivo en git.
+    private String clientId;
+
+    @Value("${config.security.oauth.client.secret}")//Esto vale 12345 y esta en un archivo en git.
+    private String passwordClient;
+
+    @Value("${config.security.oauth.client.jwt.key}")//Esto vale quetzalcode.codigo.microservicios y esta en un archivo en git.
+    private String jwtKey;
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
@@ -37,8 +49,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory().withClient("frontEndApp")//Registramos nuestra app AngularApp , ReactApp , VueApp etc...
-                .secret(passwordEncoder.encode("12345"))//Contraseña de la app registrada arriba
+        clients.inMemory().withClient(clientId)//Registramos nuestra app AngularApp , ReactApp , VueApp etc...
+                .secret(passwordEncoder.encode(passwordClient))//Contraseña de la app registrada arriba
                 .scopes("read","write")//Permisos de la app registrada
                 .authorizedGrantTypes("password","refresh_token")//password: El token lo va a obtener por password (con credenciales del usuario) , refresh_token:Este token permite obtener un nuevo token justo antes de que caduque el actual
                 .accessTokenValiditySeconds(3600)//Tiempo en que caduda el token
@@ -72,7 +84,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter tokenConverter = new JwtAccessTokenConverter();
-        tokenConverter.setSigningKey("quetzalcode.codigo.microservicios");
+        tokenConverter.setSigningKey(jwtKey);
         return tokenConverter;
     }
 }
