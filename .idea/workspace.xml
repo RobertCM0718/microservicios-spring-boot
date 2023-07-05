@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS.">
-      <change afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/event/AuthenticationSuccessErrorHandler.java" afterDir="false" />
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agrega contador de intentos para login, Se registra event en SpringSecurityConfig">
+      <change afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/bootstrap.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/clients/UsuarioFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/clients/UsuarioFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/IUsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/IUsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/impl/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/impl/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +360,7 @@
       <workItem from="1688261277890" duration="3939000" />
       <workItem from="1688422733902" duration="1033000" />
       <workItem from="1688447221531" duration="6674000" />
-      <workItem from="1688493937296" duration="21410000" />
+      <workItem from="1688493937296" duration="23422000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -432,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688514280358</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Se agrega contador de intentos para login, Se registra event en SpringSecurityConfig">
+      <option name="closed" value="true" />
+      <created>1688535741277</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688535741277</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +463,8 @@
     <MESSAGE value="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config." />
     <MESSAGE value="Se crea proyecto usuarios." />
     <MESSAGE value="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS." />
+    <MESSAGE value="Se agrega contador de intentos para login, Se registra event en SpringSecurityConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrega contador de intentos para login, Se registra event en SpringSecurityConfig" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
