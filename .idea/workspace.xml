@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se crea proyecto usuarios.">
-      <change afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-zuul-server/src/main/resources/bootstrap.properties" afterDir="false" />
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS.">
+      <change afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/event/AuthenticationSuccessErrorHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/AuthorizationServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/IUsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/IUsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/clients/UsuarioFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/clients/UsuarioFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/IUsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/IUsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/impl/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/src/main/java/com/quetzalcode/zuul/oauth/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/src/main/java/com/quetzalcode/zuul/oauth/ResourceServerConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -366,7 +364,7 @@
       <workItem from="1688261277890" duration="3939000" />
       <workItem from="1688422733902" duration="1033000" />
       <workItem from="1688447221531" duration="6674000" />
-      <workItem from="1688493937296" duration="7919000" />
+      <workItem from="1688493937296" duration="21410000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -426,7 +424,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688005409742</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS.">
+      <option name="closed" value="true" />
+      <created>1688514280358</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688514280358</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,29 +458,21 @@
     <MESSAGE value="Se agrega anotación @TimeLimiter para configurar timeOut." />
     <MESSAGE value="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config." />
     <MESSAGE value="Se crea proyecto usuarios." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se crea proyecto usuarios." />
+    <MESSAGE value="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/MicroservicioOauthApplication.java</url>
-          <line>20</line>
-          <properties class="com.quetzalcode.oauth.MicroservicioOauthApplication" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/services/impl/UsuarioServiceImpl.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java</url>
-          <line>32</line>
+          <line>33</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/event/AuthenticationSuccessErrorHandler.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
