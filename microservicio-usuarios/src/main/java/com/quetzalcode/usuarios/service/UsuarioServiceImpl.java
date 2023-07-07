@@ -5,12 +5,16 @@ import com.quetzalcode.commons.usuarios.entity.Usuario;
 import com.quetzalcode.usuarios.repository.UsuarioRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UsuarioServiceImpl implements IUsuarioService{
+
+    @Autowired
+	private BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -31,6 +35,7 @@ public class UsuarioServiceImpl implements IUsuarioService{
 
     @Override
     public Usuario save(Usuario usuario) {
+         usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
         return usuarioRepository.save(usuario);
     }
 

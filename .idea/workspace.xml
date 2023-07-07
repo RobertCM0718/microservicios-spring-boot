@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agrega configuración JWT a proyecto Gateway.">
-      <change afterPath="$PROJECT_DIR$/microservicio-productos/src/main/resources/bootstrap.properties" afterDir="false" />
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="LA configuración de sql se carga desde archivo cloud confing en git.">
+      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/security/SpringSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/bootstrap.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-config-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +82,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Documentos/code/microservicios-spring-boot/microservicio-productos/src/main/resources",
+    "last_opened_file_path": "D:/Documentos/code/microservicios-spring-boot/microservicio-usuarios/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,13 +102,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-usuarios\src\main\resources" />
       <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-productos\src\main\resources" />
       <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-zuul-server\src\main\resources" />
       <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-oauth\src\main\resources" />
       <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-usuarios\src\main\java\com\quetzalcode\usuarios\entity" />
-      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-usuarios-commons\src\main\java\com\quetzalcode\usuarios\commons\entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.quetzalcode.usuarios.security" />
       <recent name="com.quetzalcode.commons.entity" />
       <recent name="com.quetzalcode.zuul.filters" />
     </key>
@@ -364,7 +369,7 @@
       <workItem from="1688612755989" duration="4197000" />
       <workItem from="1688672007221" duration="3008000" />
       <workItem from="1688689145532" duration="10308000" />
-      <workItem from="1688750464940" duration="4369000" />
+      <workItem from="1688750464940" duration="10515000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -456,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688703771544</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="LA configuración de sql se carga desde archivo cloud confing en git.">
+      <option name="closed" value="true" />
+      <created>1688758182019</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688758182019</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,14 +499,15 @@
     <MESSAGE value="Se agrega contador de intentos para login, Se registra event en SpringSecurityConfig" />
     <MESSAGE value="Se agregan dependencias security." />
     <MESSAGE value="Se agrega configuración JWT a proyecto Gateway." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrega configuración JWT a proyecto Gateway." />
+    <MESSAGE value="LA configuración de sql se carga desde archivo cloud confing en git." />
+    <option name="LAST_COMMIT_MESSAGE" value="LA configuración de sql se carga desde archivo cloud confing en git." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java</url>
-          <line>33</line>
+          <line>38</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
