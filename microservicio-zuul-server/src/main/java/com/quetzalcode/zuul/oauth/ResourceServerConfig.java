@@ -19,6 +19,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import java.util.Arrays;
+import java.util.Base64;
 
 @RefreshScope//Indica que es suceptible a cambios provenientes de la configuración git.
 @EnableResourceServer
@@ -76,7 +77,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter tokenConverter = new JwtAccessTokenConverter();
-        tokenConverter.setSigningKey(jwtKey);
+        tokenConverter.setSigningKey(Base64.getEncoder().encodeToString(jwtKey.getBytes()));
         return tokenConverter;
     }
 }
