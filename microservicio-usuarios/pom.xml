@@ -56,10 +56,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-rest</artifactId>
-		</dependency>
+<!--		<dependency> Esta dependencia hace rest tu repository-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-data-rest</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>com.quetzalcode.usuarios.commons</groupId>
 			<artifactId>microservicio-usuarios-commons</artifactId>

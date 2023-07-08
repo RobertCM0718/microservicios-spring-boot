@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="LA configuración de sql se carga desde archivo cloud confing en git.">
-      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/security/SpringSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/bootstrap.properties" afterDir="false" />
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-config-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/config/RepositoryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/config/RepositoryConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/repository/UsuarioRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,32 +67,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Documentos/code/microservicios-spring-boot/microservicio-usuarios/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "84e48ba8d5ba83ff2d6395eaa1d2de14",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Descargas/GerryThemes.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;84e48ba8d5ba83ff2d6395eaa1d2de14&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -121,7 +117,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MicroservicioProductosApplication2">
+  <component name="RunManager" selected="Spring Boot.MicroservicioUsuariosApplication">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -333,10 +329,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MicroservicioProductosApplication" />
+        <item itemvalue="Application.MicroservicioItemsApplication" />
         <item itemvalue="Application.MicroservicioGatewayServerApplication" />
         <item itemvalue="Application.MicroservicioEurekaServerApplication" />
-        <item itemvalue="Application.MicroservicioItemsApplication" />
-        <item itemvalue="Application.MicroservicioProductosApplication" />
         <item itemvalue="Application.MicroservicioConfigServerApplication" />
       </list>
     </recent_temporary>
@@ -370,6 +366,16 @@
       <workItem from="1688672007221" duration="3008000" />
       <workItem from="1688689145532" duration="10308000" />
       <workItem from="1688750464940" duration="10515000" />
+      <workItem from="1688769694966" duration="2263000" />
+      <workItem from="1688775059395" duration="1174000" />
+      <workItem from="1688776243638" duration="146000" />
+      <workItem from="1688776396792" duration="184000" />
+      <workItem from="1688776589591" duration="267000" />
+      <workItem from="1688776867722" duration="302000" />
+      <workItem from="1688777177398" duration="194000" />
+      <workItem from="1688777379461" duration="714000" />
+      <workItem from="1688778322516" duration="306000" />
+      <workItem from="1688778636099" duration="559000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -469,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688758182019</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server.">
+      <option name="closed" value="true" />
+      <created>1688769813378</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688769813378</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,20 +514,41 @@
     <MESSAGE value="Se agregan dependencias security." />
     <MESSAGE value="Se agrega configuración JWT a proyecto Gateway." />
     <MESSAGE value="LA configuración de sql se carga desde archivo cloud confing en git." />
-    <option name="LAST_COMMIT_MESSAGE" value="LA configuración de sql se carga desde archivo cloud confing en git." />
+    <MESSAGE value="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/event/AuthenticationSuccessErrorHandler.java</url>
           <line>61</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
