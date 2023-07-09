@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server.">
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se comenta dependencia spring data rest.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-commons/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-commons/src/main/java/com/quetzalcode/commons/entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-commons/src/main/java/com/quetzalcode/commons/entity/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-oauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios-commons/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/config/RepositoryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/config/RepositoryConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +88,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Descargas/GerryThemes.jar&quot;,
@@ -238,13 +251,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MicroservicioCommonsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="microservicio-commons" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.commons.MicroservicioCommonsApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MicroservicioConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="microservicio-config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.config.server.MicroservicioConfigServerApplication" />
@@ -294,13 +300,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MicroservicioUsuariosCommonsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="microservicio-usuarios-commons" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.usuarios.commons.MicroservicioUsuariosCommonsApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MicroservicioZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="microservicio-zuul-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.zuul.MicroservicioZuulServerApplication" />
@@ -316,7 +315,6 @@
       <item itemvalue="Application.MicroservicioItemsApplication" />
       <item itemvalue="Application.MicroservicioProductosApplication" />
       <item itemvalue="JUnit.All in microservicio-productos" />
-      <item itemvalue="Spring Boot.MicroservicioCommonsApplication" />
       <item itemvalue="Spring Boot.MicroservicioConfigServerApplication" />
       <item itemvalue="Spring Boot.MicroservicioEurekaServerApplication" />
       <item itemvalue="Spring Boot.MicroservicioGatewayServerApplication" />
@@ -324,7 +322,6 @@
       <item itemvalue="Spring Boot.MicroservicioOauthApplication" />
       <item itemvalue="Spring Boot.MicroservicioProductosApplication" />
       <item itemvalue="Spring Boot.MicroservicioUsuariosApplication" />
-      <item itemvalue="Spring Boot.MicroservicioUsuariosCommonsApplication" />
       <item itemvalue="Spring Boot.MicroservicioZuulServerApplication" />
     </list>
     <recent_temporary>
@@ -375,7 +372,9 @@
       <workItem from="1688777177398" duration="194000" />
       <workItem from="1688777379461" duration="714000" />
       <workItem from="1688778322516" duration="306000" />
-      <workItem from="1688778636099" duration="559000" />
+      <workItem from="1688778636099" duration="944000" />
+      <workItem from="1688779588690" duration="5307000" />
+      <workItem from="1688881869782" duration="3810000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -483,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688769813378</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Se comenta dependencia spring data rest.">
+      <option name="closed" value="true" />
+      <created>1688779381442</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688779381442</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +522,8 @@
     <MESSAGE value="Se agrega configuración JWT a proyecto Gateway." />
     <MESSAGE value="LA configuración de sql se carga desde archivo cloud confing en git." />
     <MESSAGE value="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server." />
+    <MESSAGE value="Se comenta dependencia spring data rest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se comenta dependencia spring data rest." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -524,31 +532,6 @@
           <url>file://$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/event/AuthenticationSuccessErrorHandler.java</url>
           <line>61</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

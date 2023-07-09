@@ -3,11 +3,11 @@ package com.quetzalcode.usuarios.controller;
 
 import com.quetzalcode.commons.usuarios.entity.Usuario;
 import com.quetzalcode.usuarios.service.IUsuarioService;
-import jakarta.ws.rs.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.PathParam;
 import java.util.List;
 
 @RestController
