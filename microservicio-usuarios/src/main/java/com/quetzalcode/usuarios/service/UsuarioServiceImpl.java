@@ -20,12 +20,13 @@ public class UsuarioServiceImpl implements IUsuarioService{
     private UsuarioRepository usuarioRepository;
     @Override
     public Usuario findByUsername(String username) {
-        return usuarioRepository.findByUsername(username);
+        return usuarioRepository.findByUsername(username).orElseThrow();
     }
 
     @Override
     public Usuario findById(Long id) {
-        return usuarioRepository.findById(id).orElse(null);
+//        return usuarioRepository.findById(id).orElse(null);
+        return usuarioRepository.findById(id).orElseThrow();
     }
 
     @Override

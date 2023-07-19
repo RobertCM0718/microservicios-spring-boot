@@ -1,5 +1,6 @@
 package com.quetzalcode.oauth.services.impl;
 
+import brave.Tracer;
 import com.quetzalcode.commons.usuarios.entity.Usuario;
 import com.quetzalcode.oauth.clients.UsuarioFeignClient;
 import com.quetzalcode.oauth.services.IUsuarioService;
@@ -25,16 +26,21 @@ public class UsuarioServiceImpl implements IUsuarioService, UserDetailsService {
 
     @Autowired
     private UsuarioFeignClient usuarioFeignClient;
+
+    @Autowired
+    private Tracer tracer;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
         try {
             Usuario usuario = usuarioFeignClient.findByUserName(username);
 
-            if(usuario == null){
-                LOG.error("El usuario "+username+" no existe.");
-                throw  new UsernameNotFoundException("El usuario "+username+" no existe.");
-            }
+//            if(usuario == null){
+//                errorMessage = "El usuario "+username+" no existe.";
+//                LOG.error(errorMessage);
+//                tracer.currentSpan().tag("error.mensaje",errorMessage);
+//                throw  new UsernameNotFoundException(errorMessage);
+//            }
             LOG.info("Usuario auntenticado: "+username);
             List<GrantedAuthority> authorities = usuario.getRoles()
                     .stream().map(rol -> new SimpleGrantedAuthority(rol.getNombre()))
@@ -42,8 +48,10 @@ public class UsuarioServiceImpl implements IUsuarioService, UserDetailsService {
                     .collect(Collectors.toList());
             return new User(usuario.getUsername(),usuario.getPassword(),usuario.getActivo(),true,true,true,authorities);
         } catch (FeignException e) {
-            LOG.error("El usuario "+username+" no existe.");
-            throw  new UsernameNotFoundException("El usuario "+username+" no existe.");
+            String errorMessage = "El usuario "+username+" no existe.";
+            LOG.error(errorMessage);
+            tracer.currentSpan().tag("error.mensaje",errorMessage +": " + e.getMessage());
+            throw  new UsernameNotFoundException(errorMessage);
         }
     }
 
