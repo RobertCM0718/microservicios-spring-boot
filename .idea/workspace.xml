@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se comenta dependencia spring data rest.">
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se baja versión de spring boot a la 2.7.13">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-commons/src/main/java/com/quetzalcode/commons/entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-commons/src/main/java/com/quetzalcode/commons/entity/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-config-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-oauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios-commons/src/main/java/com/quetzalcode/commons/usuarios/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroservicioUsuariosApplication">
+  <component name="RunManager" selected="Application.MicroservicioProductosApplication2">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -374,7 +372,11 @@
       <workItem from="1688778322516" duration="306000" />
       <workItem from="1688778636099" duration="944000" />
       <workItem from="1688779588690" duration="5307000" />
-      <workItem from="1688881869782" duration="3810000" />
+      <workItem from="1688881869782" duration="4107000" />
+      <workItem from="1688933324558" duration="612000" />
+      <workItem from="1688940439994" duration="1887000" />
+      <workItem from="1689436568795" duration="3217000" />
+      <workItem from="1689731189504" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -490,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688779381442</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Se baja versión de spring boot a la 2.7.13">
+      <option name="closed" value="true" />
+      <created>1688885965590</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688885965590</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +533,8 @@
     <MESSAGE value="LA configuración de sql se carga desde archivo cloud confing en git." />
     <MESSAGE value="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server." />
     <MESSAGE value="Se comenta dependencia spring data rest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se comenta dependencia spring data rest." />
+    <MESSAGE value="Se baja versión de spring boot a la 2.7.13" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se baja versión de spring boot a la 2.7.13" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
