@@ -1,5 +1,6 @@
 package com.quetzalcode.oauth.security.event;
 
+import brave.Tracer;
 import com.quetzalcode.commons.usuarios.entity.Usuario;
 import com.quetzalcode.oauth.services.IUsuarioService;
 import feign.FeignException;
@@ -22,6 +23,9 @@ public class AuthenticationSuccessErrorHandler implements AuthenticationEventPub
     @Autowired
     private IUsuarioService usuarioService;
 
+    @Autowired
+    private Tracer tracer;
+
     private static Logger LOG = LoggerFactory.getLogger(AuthenticationSuccessErrorHandler.class);
     @Override
     public void publishAuthenticationSuccess(Authentication authentication) {
@@ -43,8 +47,12 @@ public class AuthenticationSuccessErrorHandler implements AuthenticationEventPub
 
     @Override
     public void publishAuthenticationFailure(AuthenticationException exception, Authentication authentication) {
-        LOG.info("Error en el Login: "+ exception.getMessage());
+        String mensajeError = "Error en el Login: "+ exception.getMessage();
+        LOG.info(mensajeError);
         try {
+            StringBuilder errors = new StringBuilder();
+            errors.append(mensajeError);
+
             Usuario usuario = usuarioService.findByUsername(authentication.getName());
             if(Objects.isNull(usuario)){
                 throw  new UsernameNotFoundException(String.format("El usuario %s no existe en el sistema.",authentication.getName()));
@@ -55,11 +63,16 @@ public class AuthenticationSuccessErrorHandler implements AuthenticationEventPub
 
             usuario.setIntentos(usuario.getIntentos()+1);
             LOG.info(String.format("El usuario %s lleva %s intentos.",usuario.getUsername(),usuario.getIntentos()));
+            errors.append(" - " + String.format("El usuario %s lleva %s intentos.",usuario.getUsername(),usuario.getIntentos()));
+
             if(usuario.getIntentos() >= 3){
-                LOG.error(String.format("El usuario %s es deshabilitado por máximo de intento.",usuario.getUsername()));
+                String maximosIntentos = String.format("El usuario %s es deshabilitado por máximo de intentos.",usuario.getUsername());
+                LOG.error(maximosIntentos);
+                errors.append(" - " + maximosIntentos);
                 usuario.setActivo(false);
             }
             usuarioService.update(usuario,usuario.getId());
+            tracer.currentSpan().tag("error.mensaje",errors.toString());
         }catch (FeignException e){
             LOG.error(String.format("El usuario %s no existe en el sistema.",authentication.getName()));
 //            LOG.error(e.getMessage());
