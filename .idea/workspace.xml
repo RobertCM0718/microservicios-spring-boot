@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se baja versión de spring boot a la 2.7.13">
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agregan tags perzonalizados a zipkin.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-eureka-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-oauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-oauth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +369,8 @@
       <workItem from="1688933324558" duration="612000" />
       <workItem from="1688940439994" duration="1887000" />
       <workItem from="1689436568795" duration="3217000" />
-      <workItem from="1689731189504" duration="599000" />
+      <workItem from="1689731189504" duration="5347000" />
+      <workItem from="1690173650748" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -500,7 +494,31 @@
       <option name="project" value="LOCAL" />
       <updated>1688885965590</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Se agrega zipkin en dependencias y se consulta trazabilidad en server zipkin.">
+      <option name="closed" value="true" />
+      <created>1689732449390</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689732449390</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Se agregan tags perzonalizados a zipkin.">
+      <option name="closed" value="true" />
+      <created>1689740534066</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689740534066</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Se agregan tags perzonalizados a zipkin.">
+      <option name="closed" value="true" />
+      <created>1689740620281</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1689740620281</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,14 +552,16 @@
     <MESSAGE value="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server." />
     <MESSAGE value="Se comenta dependencia spring data rest." />
     <MESSAGE value="Se baja versión de spring boot a la 2.7.13" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se baja versión de spring boot a la 2.7.13" />
+    <MESSAGE value="Se agrega zipkin en dependencias y se consulta trazabilidad en server zipkin." />
+    <MESSAGE value="Se agregan tags perzonalizados a zipkin." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregan tags perzonalizados a zipkin." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/event/AuthenticationSuccessErrorHandler.java</url>
-          <line>61</line>
+          <line>73</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
