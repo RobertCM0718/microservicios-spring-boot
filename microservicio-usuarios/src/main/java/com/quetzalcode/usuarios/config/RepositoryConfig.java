@@ -1,0 +1,19 @@
+package com.quetzalcode.usuarios.config;
+
+
+import com.quetzalcode.commons.usuarios.entity.Role;
+import com.quetzalcode.commons.usuarios.entity.Usuario;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+//@Configuration
+public class RepositoryConfig {
+
+//    @Bean
+//    public RepositoryRestConfigurer repositoryRestConfigurer() {
+//        return RepositoryRestConfigurer.withConfig(config -> {
+//            config.exposeIdsFor(Usuario.class, Role.class);
+//        });
+//    }
+
+}

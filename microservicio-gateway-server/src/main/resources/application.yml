@@ -14,7 +14,7 @@ resilience4j:
   timelimiter:
     configs:
       defecto:
-        timeoutDuration: 2s
+        timeoutDuration: 10s
     instances:
       productos:
         baseConfig: defecto
@@ -48,5 +48,11 @@ spring:
           uri: lb://microservicio-usuarios
           predicates:
             - Path=/api/usuarios/**
+          filters:
+            - StripPrefix=2
+        - id: microservicio-oauth
+          uri: lb://microservicio-oauth
+          predicates:
+            - Path=/api/security/**
           filters:
             - StripPrefix=2

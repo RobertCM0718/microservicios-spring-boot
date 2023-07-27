@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="microservicio-usuarios-commons" />
         <module name="microservicio-zuul-server" />
         <module name="microservicio-productos" />
         <module name="microservicio-eureka-server" />
         <module name="microservicio-gateway-server" />
+        <module name="microservicio-oauth" />
         <module name="microservicio-config-server" />
         <module name="microservicio-items" />
         <module name="microservicio-commons" />
@@ -24,8 +26,10 @@
       <module name="microservicio-eureka-server" options="-parameters" />
       <module name="microservicio-gateway-server" options="-parameters" />
       <module name="microservicio-items" options="-parameters" />
+      <module name="microservicio-oauth" options="-parameters" />
       <module name="microservicio-productos" options="-parameters" />
       <module name="microservicio-usuarios" options="-parameters" />
+      <module name="microservicio-usuarios-commons" options="-parameters" />
       <module name="microservicio-zuul-server" options="-parameters" />
     </option>
   </component>

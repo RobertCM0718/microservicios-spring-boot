@@ -1,0 +1,885 @@
+{
+	"info": {
+		"_postman_id": "9a63fda5-2641-4154-89d3-468d30a146c9",
+		"name": "Microservicios-Spring-Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4178672"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ver/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ver",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Producto Nuevo\",\r\n    \"precio\":1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8007/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8007",
+							"path": [
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/ver3/7/cantidad/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ver3",
+								"7",
+								"cantidad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/ver3/2/cantidad/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ver3",
+								"2",
+								"cantidad",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zuul-Gateway(Spring Cloud)",
+			"item": [
+				{
+					"name": "Items",
+					"item": [
+						{
+							"name": "listar items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/items/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"items",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ver items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/items/ver/1/cantidad/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"items",
+										"ver",
+										"1",
+										"cantidad",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener config items",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/items/obtener-config",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"items",
+										"obtener-config"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear Item",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\":\"Producto Nuevo\",\r\n    \"precio\":1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/items/crear",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"items",
+										"crear"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar Item",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 13,\r\n    \"nombre\":\"Producto Modificado\",\r\n    \"precio\":1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/items/editar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"items",
+										"editar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Item",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/items/eliminar/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"items",
+										"eliminar",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actuator Refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/items/actuator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"items",
+										"actuator",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Productos",
+					"item": [
+						{
+							"name": "listar productos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "12345678",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/productos/listar?color=verde",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"listar"
+									],
+									"query": [
+										{
+											"key": "color",
+											"value": "verde"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear Producto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\":\"Producto Nuevo\",\r\n    \"precio\":1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/productos/crear",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"crear"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar Producto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 11,\r\n    \"nombre\":\"Producto Modificado\",\r\n    \"precio\":1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/productos/editar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"editar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Producto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/productos/eliminar/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"eliminar",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ver productos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/productos/ver/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"ver",
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "noauth"
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Usuarios",
+					"item": [
+						{
+							"name": "Consultar Usuario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/usuarios/usuarios/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuarios",
+										"usuarios",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar Usuario By Username",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/usuarios/usuarios/findByUsername?username=admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuarios",
+										"usuarios",
+										"findByUsername"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "admin"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Usuario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/usuarios/usuarios/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuarios",
+										"usuarios",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear Usuario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activo\": true,\r\n    \"password\": \"12345\",\r\n    \"username\": \"roberto\",\r\n    \"nombre\": \"Roberto Joaquín\",\r\n    \"apellido\": \"Camarón Morales\",\r\n    \"email\": \"camaron.robert@hotmail.com\",\r\n    \"roles\": [\r\n        {\r\n            \"id\":1,\r\n            \"nombre\": \"ROL_USER\"\r\n        },\r\n        {\r\n            \"id\":2,\r\n            \"nombre\": \"ROL_ADMIN\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/usuarios/usuarios/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuarios",
+										"usuarios",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar Usuario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"activo\": false,\r\n    \"password\": \"12345\",\r\n    \"username\": \"robertito\",\r\n    \"nombre\": \"Roberto Joaquín\",\r\n    \"apellido\": \"Camarón Morales\",\r\n    \"email\": \"camaron.robert@hotmail.com\",\r\n    \"roles\": [\r\n        {\r\n            \"id\":1,\r\n            \"nombre\": \"ROL_USER\"\r\n        },\r\n        {\r\n            \"id\":2,\r\n            \"nombre\": \"ROL_ADMIN\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/usuarios/usuarios/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuarios",
+										"usuarios",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Security Oauth",
+					"item": [
+						{
+							"name": "Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.environment.set(\"token\", jsonData.access_token);\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "frontEndApp",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "refresh_token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6IkRvZSIsImF0aSI6IkJLNnMxNlA5SUVxS0QxWmlPYWJGazA1SmtITSIsImV4cCI6MTY4ODUxMzUyMCwibm9tYnJlIjoiSm9obiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiNUVGbmQwOEdsV1hZOVJDX2xnMEpNdkJfTUpZIiwiZW1haWwiOiJqaG9uLmRvZUBib2xzYWRlaWRlYXMuY29tIiwiY2xpZW50X2lkIjoiZnJvbnRFbmRBcHAifQ.4uFjly7rMF2Zzl9OD6dsxELiEj5cLP_bHnTsG_2nXgE",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "grant_type",
+											"value": "refresh_token",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/security/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"security",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Config Server",
+			"item": [
+				{
+					"name": "localhost:8888/microservicio-config-server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/microservicio-items/dev",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"microservicio-items",
+								"dev"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:53039/usuarios/findByUsername?username=admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "53039",
+							"path": [
+								"usuarios",
+								"findByUsername"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "admin"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}

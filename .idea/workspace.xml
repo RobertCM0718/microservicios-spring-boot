@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config.">
-      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/entity/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/entity/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/repository/UsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/IUsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/java/com/quetzalcode/usuarios/service/UsuarioServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservicio-usuarios/src/main/resources/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ed224d60-356a-4681-bda0-ef6385149d11" name="Changes" comment="Se agregan tags perzonalizados a zipkin.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/src/main/java/com/quetzalcode/items/MicroservicioItemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/java/com/quetzalcode/productos/entity/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-item/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-oauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-oauth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-productos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-productos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-usuarios/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservicio-zuul-server/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -76,37 +70,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Documentos/code/microservicios-spring-boot/microservicio-item/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "c74e880277585858651b600956d77be9",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Descargas/GerryThemes.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;84e48ba8d5ba83ff2d6395eaa1d2de14&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-item\src\main\resources" />
+      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-usuarios\src\main\resources" />
+      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-productos\src\main\resources" />
+      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-zuul-server\src\main\resources" />
+      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-oauth\src\main\resources" />
+      <recent name="D:\Documentos\code\microservicios-spring-boot\microservicio-usuarios\src\main\java\com\quetzalcode\usuarios\entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.quetzalcode.usuarios.security" />
       <recent name="com.quetzalcode.commons.entity" />
       <recent name="com.quetzalcode.zuul.filters" />
     </key>
@@ -118,7 +121,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroservicioGatewayServerApplication">
+  <component name="RunManager" selected="Application.MicroservicioProductosApplication2">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -239,13 +242,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MicroservicioCommonsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="microservicio-commons" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.commons.MicroservicioCommonsApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MicroservicioConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="microservicio-config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.config.server.MicroservicioConfigServerApplication" />
@@ -270,6 +266,13 @@
     <configuration name="MicroservicioItemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="microservicio-items" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.items.MicroservicioItemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroservicioOauthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="microservicio-oauth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quetzalcode.oauth.MicroservicioOauthApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -303,21 +306,21 @@
       <item itemvalue="Application.MicroservicioItemsApplication" />
       <item itemvalue="Application.MicroservicioProductosApplication" />
       <item itemvalue="JUnit.All in microservicio-productos" />
-      <item itemvalue="Spring Boot.MicroservicioCommonsApplication" />
       <item itemvalue="Spring Boot.MicroservicioConfigServerApplication" />
       <item itemvalue="Spring Boot.MicroservicioEurekaServerApplication" />
       <item itemvalue="Spring Boot.MicroservicioGatewayServerApplication" />
       <item itemvalue="Spring Boot.MicroservicioItemApplication" />
+      <item itemvalue="Spring Boot.MicroservicioOauthApplication" />
       <item itemvalue="Spring Boot.MicroservicioProductosApplication" />
       <item itemvalue="Spring Boot.MicroservicioUsuariosApplication" />
       <item itemvalue="Spring Boot.MicroservicioZuulServerApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MicroservicioProductosApplication" />
+        <item itemvalue="Application.MicroservicioItemsApplication" />
         <item itemvalue="Application.MicroservicioGatewayServerApplication" />
         <item itemvalue="Application.MicroservicioEurekaServerApplication" />
-        <item itemvalue="Application.MicroservicioItemsApplication" />
-        <item itemvalue="Application.MicroservicioProductosApplication" />
         <item itemvalue="Application.MicroservicioConfigServerApplication" />
       </list>
     </recent_temporary>
@@ -338,7 +341,36 @@
       <workItem from="1687915225452" duration="138000" />
       <workItem from="1687991868677" duration="820000" />
       <workItem from="1687992697649" duration="529000" />
-      <workItem from="1687993395467" duration="10097000" />
+      <workItem from="1687993395467" duration="10355000" />
+      <workItem from="1688062566633" duration="4064000" />
+      <workItem from="1688103248405" duration="64000" />
+      <workItem from="1688190103519" duration="4698000" />
+      <workItem from="1688229628716" duration="11536000" />
+      <workItem from="1688261277890" duration="3939000" />
+      <workItem from="1688422733902" duration="1033000" />
+      <workItem from="1688447221531" duration="6674000" />
+      <workItem from="1688493937296" duration="24016000" />
+      <workItem from="1688612755989" duration="4197000" />
+      <workItem from="1688672007221" duration="3008000" />
+      <workItem from="1688689145532" duration="10308000" />
+      <workItem from="1688750464940" duration="10515000" />
+      <workItem from="1688769694966" duration="2263000" />
+      <workItem from="1688775059395" duration="1174000" />
+      <workItem from="1688776243638" duration="146000" />
+      <workItem from="1688776396792" duration="184000" />
+      <workItem from="1688776589591" duration="267000" />
+      <workItem from="1688776867722" duration="302000" />
+      <workItem from="1688777177398" duration="194000" />
+      <workItem from="1688777379461" duration="714000" />
+      <workItem from="1688778322516" duration="306000" />
+      <workItem from="1688778636099" duration="944000" />
+      <workItem from="1688779588690" duration="5307000" />
+      <workItem from="1688881869782" duration="4107000" />
+      <workItem from="1688933324558" duration="612000" />
+      <workItem from="1688940439994" duration="1887000" />
+      <workItem from="1689436568795" duration="3217000" />
+      <workItem from="1689731189504" duration="5347000" />
+      <workItem from="1690173650748" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrega dependencia resilience4j y el llamado  a un metodo alternativo en caso de fallos en metodo detalle.">
       <created>1686723579962</created>
@@ -390,7 +422,103 @@
       <option name="project" value="LOCAL" />
       <updated>1687652639803</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Se crea proyecto usuarios.">
+      <option name="closed" value="true" />
+      <created>1688005409742</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688005409742</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS.">
+      <option name="closed" value="true" />
+      <created>1688514280358</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688514280358</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Se agrega contador de intentos para login, Se registra event en SpringSecurityConfig">
+      <option name="closed" value="true" />
+      <created>1688535741277</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688535741277</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Se agregan dependencias security.">
+      <option name="closed" value="true" />
+      <created>1688537648070</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688537648070</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Se agrega configuración JWT a proyecto Gateway.">
+      <option name="closed" value="true" />
+      <created>1688703771544</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688703771544</updated>
+    </task>
+    <task id="LOCAL-00013" summary="LA configuración de sql se carga desde archivo cloud confing en git.">
+      <option name="closed" value="true" />
+      <created>1688758182019</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688758182019</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server.">
+      <option name="closed" value="true" />
+      <created>1688769813378</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688769813378</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Se comenta dependencia spring data rest.">
+      <option name="closed" value="true" />
+      <created>1688779381442</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688779381442</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Se baja versión de spring boot a la 2.7.13">
+      <option name="closed" value="true" />
+      <created>1688885965590</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688885965590</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Se agrega zipkin en dependencias y se consulta trazabilidad en server zipkin.">
+      <option name="closed" value="true" />
+      <created>1689732449390</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689732449390</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Se agregan tags perzonalizados a zipkin.">
+      <option name="closed" value="true" />
+      <created>1689740534066</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689740534066</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Se agregan tags perzonalizados a zipkin.">
+      <option name="closed" value="true" />
+      <created>1689740620281</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1689740620281</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +543,29 @@
     <MESSAGE value="Se agrega anotación CircuitBreaker a servicio ver2 para indicar la relación del circuit braker configurado en el application.yml." />
     <MESSAGE value="Se agrega anotación @TimeLimiter para configurar timeOut." />
     <MESSAGE value="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se configura uri remota.&#10;Se retira content-type text/plain&#10;Se crea archivo bootstrap.properties en items.&#10;Se agrega actuator y service obtener config." />
+    <MESSAGE value="Se crea proyecto usuarios." />
+    <MESSAGE value="Se agrega configuración jwt en config server para obtener la config desde git. Se crea y registra configuración CORS." />
+    <MESSAGE value="Se agrega contador de intentos para login, Se registra event en SpringSecurityConfig" />
+    <MESSAGE value="Se agregan dependencias security." />
+    <MESSAGE value="Se agrega configuración JWT a proyecto Gateway." />
+    <MESSAGE value="LA configuración de sql se carga desde archivo cloud confing en git." />
+    <MESSAGE value="Se actualiza config en microservicio-config-server ya que el repo config paso a ser privado. Se obtiene configuraciones de microservicio usuarios de repo git con config-server." />
+    <MESSAGE value="Se comenta dependencia spring data rest." />
+    <MESSAGE value="Se baja versión de spring boot a la 2.7.13" />
+    <MESSAGE value="Se agrega zipkin en dependencias y se consulta trazabilidad en server zipkin." />
+    <MESSAGE value="Se agregan tags perzonalizados a zipkin." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregan tags perzonalizados a zipkin." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservicio-oauth/src/main/java/com/quetzalcode/oauth/security/event/AuthenticationSuccessErrorHandler.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
