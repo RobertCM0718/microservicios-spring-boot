@@ -5,8 +5,16 @@ docker images
 docker container ls
 --Muestra todos los contenedores iniciados o detenidos.
 docker ps -a
+--Detiene todos los contenedores iniciados
+docker stop $(docker ps -q)
 --Elimina imagen por su image id
 docker rmi 9d7858f24e9e
+--Elimina todos los contenedores iniciados
+docker rm $(docker ps -aq)
+--Ejecuta los contenedores docker-compose
+docker-compose up
+--Elimina los contenedores docker-compose
+docker-compose down
 
 
 ----Creación de red docker-----
@@ -37,6 +45,8 @@ docker build -t microservicio-items:v1 .
 docker build -t microservicio-gateway-server:v1 .
 --zuul
 docker build -t microservicio-zuul-server:v1 .
+--zipkin-server
+docker build -t zipkin-server:v1 .
 
 
 ----Creación de contenedores----
@@ -48,17 +58,39 @@ docker run -p 8761:8761 --name microservicio-eureka-server --network microservic
 docker run -p 3306:3306 --name microservicios-mysql8 --network microservicios -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=microservicios -d mysql:8
 --postgresSQL15-alpine  microservicios-postgres15
 docker run -p 5432:5432 --name microservicios-postgres15 --network microservicios -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=microservicios -d postgres:15-alpine
---productos
+--productos microservicio-productos
 docker run -P --name microservicio-productos --network microservicios -d microservicio-productos:v1
---usuarios
+--usuarios microservicio-usuarios
 docker run -P --name microservicio-usuarios --network microservicios -d microservicio-usuarios:v1
---oauth
+--oauth microservicio-oauth
 docker run -P --name microservicio-oauth --network microservicios -d microservicio-oauth:v1
---items
+--items microservicio-items
 docker run -p 8090:8090 -p 8005:8005 -p 8007:8007 --name microservicio-items --network microservicios -d microservicio-items:v1
---gateway-server
+--gateway-server microservicio-gateway-server
 docker run -p 8080:8080 --name microservicio-gateway-server --network microservicios -d microservicio-gateway-server:v1
---zuul-server
+--zuul-server microservicio-zuul-server
 docker run -p 8080:8080 --name microservicio-zuul-server --network microservicios -d microservicio-zuul-server:v1
---rabbitMQ
+--rabbitMQ microservicios-rabbitmq312
 docker run -p 15672:15672 -p 5672:5672 --name microservicios-rabbitmq312 --network microservicios -d rabbitmq:3.12.2-management-alpine
+--zipkin zipkin-server
+docker run -p 9411:9411 --name zipkin-server --network microservicios -e RABBIT_ADDRESSES=microservicios-rabbitmq312:5672 -e STORAGE_TYPE=mysql -e MYSQL_USER=zipkin -e MYSQL_PASS=zipkin -e MYSQL_HOST=microservicios-mysql8 zipkin-server:v1
+
+
+--docker-compose  levanta todos los servicios
+docker-compose up
+--ejecuta servicio por servicio
+docker-compose up -d microservicios-rabbitmq312
+docker-compose up -d microservicio-config-server
+docker-compose up -d microservicio-eureka-server
+docker-compose up -d microservicios-mysql8
+docker-compose up -d microservicios-postgres15
+docker-compose up -d zipkin-server
+docker-compose up -d microservicio-usuarios
+docker-compose up -d microservicio-productos
+docker-compose up -d microservicio-items
+docker-compose up -d microservicio-oauth
+docker-compose up -d microservicio-gateway-server
+
+--muestra logs
+docker-compose logs -f
+
