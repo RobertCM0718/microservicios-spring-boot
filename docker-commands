@@ -5,8 +5,16 @@ docker images
 docker container ls
 --Muestra todos los contenedores iniciados o detenidos.
 docker ps -a
+--Detiene todos los contenedores iniciados
+docker stop $(docker ps -q)
 --Elimina imagen por su image id
 docker rmi 9d7858f24e9e
+--Elimina todos los contenedores iniciados
+docker rm $(docker ps -aq)
+--Ejecuta los contenedores docker-compose
+docker-compose up
+--Elimina los contenedores docker-compose
+docker-compose down
 
 
 ----Creación de red docker-----
@@ -66,3 +74,23 @@ docker run -p 8080:8080 --name microservicio-zuul-server --network microservicio
 docker run -p 15672:15672 -p 5672:5672 --name microservicios-rabbitmq312 --network microservicios -d rabbitmq:3.12.2-management-alpine
 --zipkin zipkin-server
 docker run -p 9411:9411 --name zipkin-server --network microservicios -e RABBIT_ADDRESSES=microservicios-rabbitmq312:5672 -e STORAGE_TYPE=mysql -e MYSQL_USER=zipkin -e MYSQL_PASS=zipkin -e MYSQL_HOST=microservicios-mysql8 zipkin-server:v1
+
+
+--docker-compose  levanta todos los servicios
+docker-compose up
+--ejecuta servicio por servicio
+docker-compose up -d microservicios-rabbitmq312
+docker-compose up -d microservicio-config-server
+docker-compose up -d microservicio-eureka-server
+docker-compose up -d microservicios-mysql8
+docker-compose up -d microservicios-postgres15
+docker-compose up -d zipkin-server
+docker-compose up -d microservicio-usuarios
+docker-compose up -d microservicio-productos
+docker-compose up -d microservicio-items
+docker-compose up -d microservicio-oauth
+docker-compose up -d microservicio-gateway-server
+
+--muestra logs
+docker-compose logs -f
+

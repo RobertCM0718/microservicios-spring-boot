@@ -1,0 +1,119 @@
+version: '3.8'
+services:
+  microservicios-rabbitmq312:
+      image: rabbitmq:3.12.2-management-alpine
+      ports:
+        - "15672:15672"
+        - "5672:5672"
+      restart: always
+      networks:
+        - microservicios
+  microservicio-config-server:
+    image: microservicio-config-server:v1
+    ports:
+      - "8888:8888"
+    restart: always
+    networks:
+      - microservicios
+  microservicio-eureka-server:
+    image: microservicio-eureka-server:v1
+    ports:
+      - "8761:8761"
+    restart: always
+    networks:
+      - microservicios
+  microservicios-mysql8:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    restart: always
+    networks:
+      - microservicios
+    environment:
+      MYSQL_DATABASE: microservicios
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+#      - ./mysql-data:/var/lib/mysql
+      - ./init-scripts:/docker-entrypoint-initdb.d
+  microservicios-postgres15:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    restart: always
+    networks:
+      - microservicios
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: microservicios
+  zipkin-server:
+    image: zipkin-server:v1
+    ports:
+      - "9411:9411"
+    restart: always
+    networks:
+      - microservicios
+    environment:
+      RABBIT_ADDRESSES: microservicios-rabbitmq312:5672
+      STORAGE_TYPE: mysql
+      MYSQL_USER: zipkin
+      MYSQL_PASS: zipkin
+      MYSQL_HOST: microservicios-mysql8
+    depends_on:
+      - microservicios-rabbitmq312
+      - microservicios-mysql8
+  microservicio-usuarios:
+    image: microservicio-usuarios:v1
+    restart: always
+    networks:
+      - microservicios
+    depends_on:
+      - microservicio-config-server
+      - microservicio-eureka-server
+      - microservicios-postgres15
+  microservicio-productos:
+    image: microservicio-productos:v1
+    restart: always
+    networks:
+      - microservicios
+    depends_on:
+      - microservicio-config-server
+      - microservicio-eureka-server
+      - microservicios-mysql8
+  microservicio-items:
+    image: microservicio-items:v1
+    ports:
+      - "8002:8002"
+      - "8005:8005"
+      - "8007:8007"
+    restart: always
+    networks:
+      - microservicios
+    depends_on:
+      - microservicio-config-server
+      - microservicio-eureka-server
+      - microservicio-productos
+  microservicio-oauth:
+    image: microservicio-oauth:v1
+    restart: always
+    networks:
+      - microservicios
+    depends_on:
+      - microservicio-config-server
+      - microservicio-eureka-server
+      - microservicio-usuarios
+  microservicio-gateway-server:
+    image: microservicio-gateway-server:v1
+    ports:
+      - "8080:8080"
+    restart: always
+    networks:
+      - microservicios
+    depends_on:
+      - microservicio-config-server
+      - microservicio-eureka-server
+      - microservicio-usuarios
+      - microservicio-productos
+      - microservicio-items
+      - microservicio-oauth
+networks:
+  microservicios:
